@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section class="section">
+      <div class="container">
+        <HelloWorld />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -10,9 +13,14 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  beforeCreate() {
+    this.$liff.init({
+      liffId: '1654371376-432e1Kbo',
+    });
+  },
   components: {
     HelloWorld
-  }
+  },
 }
 </script>
 
